@@ -1,68 +1,106 @@
 body {
-    font-family: "Lato", sans-serif;
-    background: url("/photos/desktopconst.png");
-  background-attachment:fixed;
-
+  font-family: "Lato", sans-serif;
+  background: url("/photos/desktopconst.png");
+  background-attachment: fixed;
   font-family: 'Quicksand', sans-serif;
+  background-color: rgba(0, 0, 0, 0.904);
+  color: #c0c0c0;
+  font-size: 1rem;
+}
 
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(17, 17, 17);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
 
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
 
-  
-  }
-  
+.sidenav span{
+  position: absolute;
+  top:80vh;
+}
+
+.sidenav span img{
+  width:5vw;
+  height:auto;
+}
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
   .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(17, 17, 17);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 15px;
   }
-  
   .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+    font-size: 18px;
   }
+}
 
-  
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-
-
-.container{
-
+.containerMain {
+  width:80vw;
   text-align: center;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas: "nav" "intro" "main" "footer" ;
+  grid-gap:10vh;
+margin:10vw;
+align-content: center;
 
 }
 
 
-  .mainPreview img{
+.navigationMenu{
+  grid-area:nav;
+  position: absolute;
+  left:5vw;
+  top:5vw;
+}
+.intro{
+  grid-area: intro;
+  justify-content: center;
 
-width:25vw;
-  }
+}
 
-  li{
-    list-style-type: none;
-  }
+.main{
+grid-area:main;
+}
+footer{
+grid-area:footer;
+}
+.mainPreview ul {
+  float: left;
+}
+
+.mainPreview img {
+  width: 25vw;
+}
+
+li {
+  list-style-type: none;
+}
+

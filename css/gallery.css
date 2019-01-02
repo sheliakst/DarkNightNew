@@ -1,0 +1,53 @@
+.wrapperGallery{
+    display:flex;
+    flex-direction: row;
+}
+
+.wrapperGallery1 , .wrapperGallery2{
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+}
+.wrapperGallery img{
+    width:40vw;
+}
+
+
+
+.imageLoad{
+    display:none;
+}
+
+
+
+.imageLoad {
+    display: none;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "headImg" "mainImg" "infoImg";
+    grid-gap: 5vh;
+    position: fixed;
+    z-index: 1;
+    padding-top: 5vh;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(54, 53, 53, 0.986);
+    overflow: auto;
+    left:0;
+    transition: .5s;
+}
+
+.headerImage {
+    grid-area: headImg;
+    border-bottom: 2px solid rgba(24, 23, 23, 0.795)
+}
+
+.imageFull {
+    grid-area: mainImg;
+}
+
+.overImageview {
+    grid-area: infoImg;
+    background-color: rgba(31, 30, 30, 0.548);
+}

@@ -1,0 +1,21 @@
+.mobButtons p {
+    border: 1px solid white;
+    border-radius: 2px;
+    padding: 1vh;
+    word-wrap: break-word;
+    transform: translate(50%, -10%);
+}
+
+.mobButtons {
+    width: 40vw;
+}
+
+
+.mainApp{
+    display: none;
+}
+
+.mobButtonsPush{
+
+}
+
