@@ -1,6 +1,6 @@
 body {
   font-family: "Lato", sans-serif;
-  background: url("/photos/desktopconst.png");
+  background: url("../photos/desktopconst.png");
   background-attachment: fixed;
   font-family: 'Quicksand', sans-serif;
   background-color: rgba(0, 0, 0, 0.904);
@@ -97,7 +97,7 @@ grid-area:footer;
 }
 
 .mainPreview img {
-  width: 25vw;
+  width: 15vw;
 }
 
 li {
