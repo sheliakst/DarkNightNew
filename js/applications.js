@@ -1,9 +1,9 @@
-let coordcontent = ""; 
-let  test;
+let coordcontent = "";
+let test;
 
 
 $(document).ready(function () {
-  
+
 
 
     fillgrid(coordcontent);
@@ -20,7 +20,7 @@ $(document).ready(function () {
               <td >${val.MAG}</20x15td>
               </tr>`;
 
-               
+
 
             };
 
@@ -35,16 +35,35 @@ $(document).ready(function () {
         $(".mainApp").toggle();
     });
 
+
+
+
+    $(".table").on("click", function () {
+        $("#myModal").css("display", "block");
+    });
+
+    $(".modal-header").click(function () {
+        $("#myModal").css("display", "none");
+    });
+
+    var modal = document.getElementById("myModal");
+
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+
 });
 
 
 
 
 
-    //fill grid
-    function fillgrid(el) {
+//fill grid
+function fillgrid(el) {
 
-        coordrow = `
+    coordrow = `
     <thead class="thead-dark  " >
     <tr>
     <th >#</th>
@@ -55,7 +74,7 @@ $(document).ready(function () {
     <th >Size</th>
     </tr>
     </thead>`;
-        $(".grid").html(coordrow);
+    $(".grid").html(coordrow);
 
 
-    };
+};
